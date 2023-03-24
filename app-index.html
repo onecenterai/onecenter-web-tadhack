@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+  <header>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Engage Digital Demo App" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta id="theme-color" name="theme-color" content="#ffffff" />
+
+  <base target="_blank" />
+
+  <title>One Center</title>
+
+  <link rel="stylesheet" href="app-css.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+  </header>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-9" style="text-align: center;background-color: rgb(209, 224, 200);">
+        <p>
+        <div style="color: #171618;"><strong>Welcome to One Center, click call to continue</strong></div>
+        </p>
+      </div>
+      <div class="col" style="background-color: rgb(209, 224, 200);">
+        <div class=" callButton">
+          <button id="engage-digital-click-to-call-btn"></button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <!-- <div class="col-9">
+        <br>
+        <div style="color: blue;font-family:Georgia, 'Times New Roman', Times, serif;;">Guide to plug-in Click-to-Call
+          feature to your website</div>
+        <br>
+        <iframe src="app-guide-content.html" class="guide-content"></iframe>
+      </div> -->
+      <div class="col-12">
+        <div class="row">
+          <div class="inneraudio">
+
+            <div class="remoteAudio">
+              <div class="logoIcon">
+                <img id="initial" class="logo" style="visibility:hidden;display:none; justify-content: center;"
+                  src="mobile-phone.png" alt="Call Logo" width="100" height="100">
+                <img id="Ringing" style="visibility:hidden;display:none;" src="call.png" alt="CalLRinging" width="100"
+                  height="100">
+                <img id="Connected" style="visibility:hidden;display:none;" src="phone-call.png" alt="CallConnected"
+                  width="100" height="80">
+              </div>
+              <audio id="engage-digital-remote-audio" autoplay controls></audio>
+            </div>
+
+          </div>
+          <div class="alert" id='engage-digital-alert'></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- If you want a specific version of engageDigital.js, you can give the url here.
+    If not given the latest sdk will be automatically downloaded from the given engageDomain (attribute in engage-digital-click-to-call-config.js)
+  -->
+  <!-- script src="https://rtc.engagedigital.ai/engageDigital.js"></script -->
+  <script src="engage-digital-click-to-call-config.js"></script>
+  <script src="engage-digital-click-to-call.js"></script>
+
+</body>
+
+</html>

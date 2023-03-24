@@ -1,0 +1,187 @@
+<!--Edited using https://html-online.com/editor
+    For further change copy the below div content to editor -> modify -> paste here -> format -> Save -->
+<div id="main" class="main-content">
+    <section>
+        <article>
+            <p>You can easily integrate click-to-call feature into your website without writing a single line of
+                javascript code.<br />The javascript files provided here will abstract away the logic of connecting to
+                the Engage Digital platform, making the calls, binding remote audio to the html etc.<br />It
+                can be easily plugged into an existing website with minimal changes.</p>
+            <p><strong>Follow this guide step by step, to integrate Engage Platform's click-to-call feature to your
+                    Website.</strong></p>
+            <ol>
+                <li>Copy the below files to the root of your web application. For evaluation purpose you can create a
+                    folder (eg: myApp) and copy the files there.
+                    <ul>
+                        <li><a href="engage-digital-click-to-call-config.js"
+                                target="_blank">engage-digital-click-to-call-config.js</a></li>
+                        <li><a href="engage-digital-click-to-call.js"
+                                target="_blank">engage-digital-click-to-call.js</a></li>
+                    </ul>
+                </li>
+                <li>Update your web page by incorporating the below UI elements. For evaluation purpose you can create
+                    an index.html in myApp folder and place the below contents there.</li>
+            </ol>
+            <ul>
+                <li style="list-style-type: none;">
+                    <ul>
+                        <li>Create a button, so that user can click on this button to make a call</li>
+                    </ul>
+                </li>
+            </ul>
+            <p style="padding-left: 80px;">
+                <code>Example:</code><br /><code>&amp;lt;button id="<span style="color: #008000;"><em><strong>engage-digital-click-to-call-btn</strong></em></span>"&amp;gt;Call&amp;lt;/button&amp;gt;</code>
+            </p>
+            <ul>
+                <li style="list-style-type: none;">
+                    <ul>
+                        <li style="list-style-type: none;"><code>Example:</code></li>
+                        <li style="list-style-type: none;">&nbsp;</li>
+                        <li>Create a audio element to play the remote audio. Make sure <strong>autoplay,
+                            </strong> and <strong>controls</strong> properties are given.</li>
+                        <li style="list-style-type: none;"><code>Example:</code></li>
+                        <li style="list-style-type: none;">
+                            <code>&amp;lt;audio id="<em><strong><span style="color: #800080;">engage-digital-remote-audio</span></strong></em>" <strong>autoplay controls</strong> style="width:300px;height:225px;background-color:gray"&amp;gt;&amp;lt;/audio&amp;gt;</code>&nbsp;
+                        </li>
+                        <li style="list-style-type: none;">&nbsp;</li>
+                        <li style="list-style-type: none;"><code></code></li>
+                        <li>Optionally you can define a div element to display important events as part of call
+                            handling. This may help in debugging.</li>
+                        <li style="list-style-type: none;"><code>Example:</code></li>
+                        <li style="list-style-type: none;">
+                            <code>&amp;lt;div id='<em><strong><span style="color: #ff9900;">engage-digital-alert</span></strong></em>'&amp;gt;&amp;lt;/div&amp;gt;</code>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <p style="padding-left: 80px;"><code></code></p>
+            <p style="padding-left: 40px;">The styling and placing of these elements are entirely up to you and can be
+                designed in a way that suites the design of your site.<br />So these elements can be placed anywhere and
+                can be styled at your wish.</p>
+            <p style="padding-left: 40px;">As an example refer the HTML content (app-index.html) of this Demo
+                application to see how these elements are placed in this page.</p>
+            <p style="padding-left: 40px;"><strong>Note</strong>: The Ids used in these elements should be configured
+                properly in engage-digital-click-to-call-config.js.<br />Refer <b>Update Configuration</b> section for
+                more details.
+            </p>
+            <ol start="4">
+                <li>
+                    <div id="configuration">Update Configuration</div>
+                    <p>Update the configuration
+                        in&nbsp;<strong>engage-digital-click-to-call-config.js</strong>&nbsp;with proper values. It has
+                        the following properties.</p>
+                    <ul>
+                        <li><strong>engageDomain</strong>: Engage Digital RTC domain name. Get this domain name from
+                            Engage Platform Admin. In this demo you can use the publicly hosted
+                            <strong>rtc.engagedigital.ai</strong>
+                        </li>
+                        <li><strong>callTo</strong>:The number to dial to. It should be a proper service number.
+                            Creating the service and assigning it to a number can be done through ESMP-UI.<br />In this
+                            demo, you can use the number <strong>9070707120</strong>&nbsp;which is available in publicly
+                            hosted ESMP portal (<strong>https://portal.engagedigital.ai</strong>)<br />Note: When you
+                            dial to this number a audio announcement will be played.</li>
+                        <li><strong>callType</strong>: Type of call. Valid values are audio.</li>
+                        <li><strong>callBtnId</strong>: Id of the Call Button. Make sure the same id is used in your
+                            html call button. In this example it is <span
+                                style="color: #008000;"><code><span class="str"><em><strong>engage-digital-click-to-call-btn</strong></em></span></code></span>
+                        </li>
+
+                        <li><strong>remoteAudioId</strong>: Id of the Remote Audio element. Make sure the same id is
+                            used in your html remote audio element. In this example it is
+                            <code><span style="color: #800080;"><em><strong>engage-digital-remote-audio</strong></em></span>.</code>
+                        </li>
+                        <li><strong>makeCallText</strong>: The text to be displayed in the call button.</li>
+                        <li><strong>disconnectCallText</strong>: The text to be displayed on call button once the call
+                            is established or in the process of connecting. So the user will get the context and can
+                            disconnect the call.</li>
+                        <li><strong>alertDivId</strong>: If this div id is given, important events will be displayed
+                            here. This can be helpful while debugging the application. In this example it is <span
+                                style="color: #ff9900;"><em><strong><code><span class="str">engage-digital-alert</span></code></strong></em></span>
+                        </li>
+                        <li><strong>consoleLog</strong>: If its true, click-to-call logs as well as EngageDigital logs
+                            will be written to browser console</li>
+
+                    </ul>
+                </li>
+                <li>
+                    <p>Add the Engage Digital click-to-call javascript files to your website just before closing the
+                        "body" tag as shown below. Please make sure engage-digital-click-to-call-config.js is included
+                        before engage-digital-click-to-call.js, the order of including these files is important.</p>
+                </li>
+            </ol>
+            <div><code><span class="tag">&nbsp; &nbsp; &nbsp;&amp;lt;body&amp;gt;</span></code></div>
+            <div style="padding-left: 40px;"><span style="font-family: monospace;"><span
+                        style="background-color: #bfe6ff;">&nbsp; &nbsp;&amp;lt;!--Click to call UI elements and other
+                        content of your site --&amp;gt;</span></span><code></code></div>
+            <div>
+                <code><span class="tag">&nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;script</span> <span class="atn">src</span><span class="pun">=</span><span class="atv">"engage-digital-click-to-call-config.js"&amp;gt;&amp;lt;</span><span class="tag">/script&amp;gt;</span></code>
+            </div>
+            <div>
+                <code><span class="tag">&nbsp; &nbsp; &nbsp; &nbsp; &amp;lt;script</span> <span class="atn">src</span><span class="pun">=</span><span class="atv">"engage-digital-click-to-call.js"&amp;gt;</span><span class="tag">&amp;lt;/script&amp;gt;</span></code>
+            </div>
+            <div><code><span class="tag">&nbsp; &nbsp; &nbsp;&amp;lt;/body&amp;gt;</span></code></div>
+            <ol start="6">
+                <li><span class="tag">Congratulations, now all the changes are done. You can open the Application in
+                        browser and make a call.</span></li>
+            </ol>
+            <p><strong>Note</strong>&nbsp;With the above steps, when engage-digital-click-to-call.js is loaded, it will
+                connect to the Engage Digital platform with the engageDomain provided in the
+                engage-digital-click-to-call-config.js file.<br />If you want to programmatically connect to the Engage
+                Platform without providing this configuration file, you can
+                call&nbsp;<strong>initializeEngageDigitalClickToCall(config)</strong>&nbsp;function explicitly. In that
+                case, engage-digital-click-to-call-config.js file should not be included in your website.</p>
+            <p><strong>Example:</strong></p>
+            <div style="padding-left: 40px;"><code><span class="tag">&amp;lt;body&amp;gt;</span></code></div>
+            <div style="padding-left: 40px;"><span style="font-family: monospace;"><span
+                        style="background-color: #bfe6ff;">&amp;lt;!--Click to call UI elements and other content of
+                        your site --&amp;gt;</span></span></div>
+            <div style="padding-left: 80px;">
+                <code><span class="tag">&amp;lt;script</span> <span class="atn">src</span><span class="pun">=</span><span class="atv">"engage-digital-click-to-call.js"</span><span class="tag">&gt;&amp;lt;/script&amp;gt;</span></code>
+            </div>
+            <div style="padding-left: 80px;">
+                <code><span class="tag">&amp;lt;script</span> <span class="atn">type</span><span class="pun">=</span><span class="atv">"text/javascript"<span class="tag">&amp;gt;</span></span></code>
+            </div>
+            <div style="padding-left: 80px;">
+                <code><span class="pln">        initializeEngageDigitalClickToCall</span><span class="pun">(</span></code><code><span class="pun">{</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">engageDomain</span><span class="pun">:</span> <span class="str">'rtc.engagedigital.ai'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">callTo</span><span class="pun">:</span> <span class="str">'9070707120'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;"><code><span class="pun">callType: 'audio',</span></code><code></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">callBtnId</span><span class="pun">:</span> <span class="str">'engage-digital-click-to-call-btn'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">makeCallText</span><span class="pun">:</span> <span class="str">'Call'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">disconnectCallText</span><span class="pun">:</span> <span class="str">'End Call'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">remoteAudioId</span><span class="pun">:</span> <span class="str">'engage-digital-remote-audio'</span><span class="pun">,</span></code>
+            </div>
+            <div style="padding-left: 120px;">
+                <code><span class="pln">alertDivId</span><span class="pun">:</span> <span class="str">'engage-digital-alert',</span></code>
+            </div>
+            <div style="padding-left: 120px;"><code><span class="str">consoleLog: false,</span></code></div>
+            <div style="padding-left: 120px;"><code></code></div>
+            <div style="padding-left: 80px;"><code>                            <span class="pun">});</span></code></div>
+            <div style="padding-left: 80px;"><code><span class="tag">&amp;lt;/script&amp;gt;</span></code></div>
+            <div style="padding-left: 40px;"><code><span class="tag">&amp;lt;/body&amp;gt;</span></code>
+                <div class="pre-top-bar-container">
+                    <div class="code-lang-name-container">&nbsp;</div>
+                    <div class="code-copy-icon-container">
+                        <div>
+                            <div id="tooltip-pre-id-2" class="tooltip">&nbsp;</div>
+                            <div>&nbsp;</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+</div>
