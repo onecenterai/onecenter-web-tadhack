@@ -5,7 +5,7 @@ FROM node:14-alpine
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . /app
+COPY app-css.css app-guide-content.html app-index.html call.png engage-digital-click-to-call-config.js engage-digital-click-to-call.js mobile-phone.png phone-call.png /app/
 
 # Install any necessary dependencies
 RUN npm install express
