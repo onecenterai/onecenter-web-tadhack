@@ -16,10 +16,10 @@ var engageDigitalClickToCallConfig = {
     callBtnId: 'engage-digital-click-to-call-btn', 
     
     /** The text to be displayed in the call button before the establishment of the call*/
-    makeCallText: 'Call',
+    makeCallText: '<img src="telephone.png" style = "height: 30px; width: 30px" alt="">',
     
     /** The text to be displayed on call button once the call is established or in the process of connecting. So the user will get the context and can disconnect the call.*/
-    disconnectCallText: 'End Call',
+    disconnectCallText: '<img src="call-end.png"  style = "height: 30px; width: 30px" alt="">',
     
    
     

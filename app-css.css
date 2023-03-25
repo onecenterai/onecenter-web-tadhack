@@ -1,9 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;700&display=swap');
+html{
+  font-size: 65.5%;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+h4.logo{
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+ul{
+  all: unset;
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 0 !important;
+  font-size: 1.8rem;
+  align-items: center;
+  justify-content: center;
+}
+li{
+  list-style: none;
+  color: black;
+  font-weight: bold;
+  opacity: 0.5;
+
+
+}
+.heroSection{
+  height: 100vh;
+  padding: 0rem 10rem;
+}
+.heroSection h1{
+  font-size: 8rem;
+  font-weight: bold;
+}
+.span {
+  color: #364cc9;
+}
+.heroSection h3{
+  font-size: 3rem;
+  margin: 2rem 0rem;
+  opacity: .7;
+}
+.heroSection p{
+  font-size: 2rem;
+  opacity: .7;
+  margin: 2rem 0rem;
+}
+li a{
+  all: unset;
+  cursor: pointer;
+}
+.contact-btn{
+  /* margin-top: 3rem; */
+  padding: 2rem 3rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border: none !important;
+  border-radius: 2rem;
+  transition: all ease-in-out .5s;
+
+}
+.contact-btn:hover{
+  box-shadow: 0 0 4.5rem 1.6rem #00000021;
+  background-color: white;
+  color: #364cc9;
+  scale: 1.1;
+  border: .3rem solid #364cc9;
+  transition: all ease-in-out .5s;
+}
+
+.cards{
+  padding: 4rem 0;
+  /* height: 90vh;
+  overflow-y: scroll; */
+  /* position: relative; */
+}
 button {
   border: 1px solid #050e16;
   background-color: #364cc9;
   color: #ffffff;
   padding: 5px 10px;
 }
+
 
 button:hover {
   cursor: pointer;
@@ -27,12 +109,6 @@ button#hangupButton {
   margin: auto;
 }
 
-.callButton {
-  float: right;
-  text-align: center;
-  padding: 5px;
-}
-
 audio {
   background-color: rgb(241, 239, 239);
   margin-left:15px;
@@ -41,6 +117,7 @@ audio {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  width: 95%;
 }
 
 .inneraudio{
@@ -49,16 +126,17 @@ audio {
   align-items: center;
   margin: auto;
   margin-top: 80px;
-  width:350px;
-  height: 300px;
+  width:100%;
+  height: 70rem;
 }
 
 .remoteAudio {
   background-color: rgb(241, 239, 239);
-  margin-top: 10px;
+  /* margin-top: 10px;
   margin-left: 20px;
-  width: 400px;
-  height: 225px;
+  width: 400px; */
+  width: 70%;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -81,3 +159,147 @@ audio {
   margin: auto;
 }
 .guide-content {position: absolute; width: 100%; height: 750px; }
+
+.card{
+  border: none !important;
+  background-color: whitesmoke;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 5rem;
+  box-shadow: 0 0 4.5rem 0.1rem #00000021;
+}
+.name-status{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card h4{
+  opacity: 0.6;
+  font-size: 2rem;
+  padding-top: 2rem;
+}
+.name-status h6{
+  background-color: #28a745;
+  padding: 0.5rem 1rem ;
+  color: white;
+  font-weight: bold;
+  border-radius: 3rem;
+}
+.callButton{
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 5rem;
+  margin-bottom: 5rem;
+}
+.callButton button{
+  border-radius:50%;
+  height: 70px;
+  width: 70px;
+  /* padding: 1rem 3rem; */
+  color: black;
+  background-color: #28a745;
+  color: white;
+  font-size: 2rem;
+  border: none;
+}
+#image img{
+  border-radius: 1rem;
+}
+@media screen and (max-width:430px) {
+  audio{
+    width: 85%;
+  }
+  h4.logo{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  ul{
+    all: unset;
+    display: flex;
+    margin-bottom: 0 !important;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+  }
+  li{
+    list-style: none;
+    color: black;
+    font-weight: bold;
+    opacity: 0.5;
+    margin-left: 1rem;
+  
+  
+  }
+  .card h4{
+    font-size: 1.2rem;
+    opacity: 0.6
+  }
+  .contact-btn{
+    /* margin-top: 3rem; */
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 2rem;
+    transition: all ease-in-out .5s;
+  
+  }
+  .contact-btn:hover{
+    box-shadow: 0 0 4.5rem 1.6rem #00000021;
+    background-color: white;
+    color: #364cc9;
+    scale: 1.1;
+    border: .3rem solid #364cc9;
+    transition: all ease-in-out .5s;
+  }
+  
+  /* .remoteAudio{
+    width: 100%;
+  } */
+  .col-6 {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100%  !important;
+    max-width: 100%  !important;
+  }
+  .heroSection{
+    height: 100vh;
+    padding: 0rem 2rem;
+  }
+  .heroSection h1{
+    font-size: 5rem;
+    font-weight: bold;
+  }
+  .span {
+    color: #364cc9;
+  }
+  .heroSection h3{
+    font-size: 2rem;
+    margin: 2rem 0rem;
+    opacity: .7;
+  }
+  .heroSection p{
+    font-size: 1.5rem;
+    opacity: .7;
+    margin: 2rem 0rem;
+  }
+  .heroSectionImage{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 3rem;
+    position: relative;
+    z-index: 3;
+  }
+  .heroIntroContainer{
+    display: flex;align-items: center;height:auto
+  }
+  .inneraudio{
+    height: 30rem;
+  }
+
+}
