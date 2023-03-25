@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+  <header>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Engage Digital Demo App" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta id="theme-color" name="theme-color" content="#ffffff" />
+
+  <base target="_blank" />
+
+  <title>One Center</title>
+
+  <link rel="stylesheet" href="app-css.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+  </header>
+<body>
+
+
+          <div class="inneraudio">
+
+            <div class="remoteAudio">
+              <div class="logoIcon">
+                <img id="initial" class="logo" style="visibility:hidden;display:none; justify-content: center;"
+                  src="mobile-phone.png" alt="Call Logo" width="100" height="100">
+                <img id="Ringing" style="visibility:hidden;display:none;" src="call.png" alt="CalLRinging" width="100"
+                  height="100">
+                <img id="Connected" style="visibility:hidden;display:none;" src="phone-call.png" alt="CallConnected"
+                  width="100" height="80">
+              </div>
+              <audio id="engage-digital-remote-audio" autoplay controls></audio>
+            </div>
+
+          </div>
+          <!-- Available Call Centers -->
+
+
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>MTN</td>
+                <td>MTN Nigeria is a Nigerian telecommunications company, and a subsidiary of South African telecommunications
+                  company MTN Group.</td>
+                <td><button class="btn btn-success">Online</button></td>
+              </tr>
+              <tr>
+                <td>GT Bank</td>
+                <td>Guaranty Trust Bank plc is a Nigerian multinational financial services company, with its headquarters in
+                  Lagos.</td>
+                <td><button class="btn btn-success">Online</button></td>
+              </tr>
+              <tr>
+                <td>DSTV</td>
+                <td>DStv is a direct broadcast satellite service owned by MultiChoice Africa, a subsidiary of Naspers.</td>
+                <td><button class="btn btn-success">Online</button></td>
+              </tr>
+              <tr>
+                <td>iT Central</td>
+                <td>iT Central is a leading provider of IT solutions and services in Nigeria.</td>
+                <td><button class="btn btn-success">Online</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="alert" id='engage-digital-alert'></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="name-status">
+      <div id="image">
+        <img src="mtn.png" height="50rem" width="50rem" alt="">
+      </div>
+      <h6>Online</h6>
+
+    </div>
+    <div class="description">
+      <h4>MTN Nigeria is a Nigerian telecommunications company, and a subsidiary of South African telecommunications company MTN Group.</h4>
+    </div>
+        <div class=" callButton">
+          <button id="engage-digital-click-to-call-btn"></button>
+        </div>
+      </button>
+    </div>
+  <div class="card">
+    <div class="name-status">
+      <div id="image">
+        <img src="gtbank.png" height="50rem" width="50rem" alt="">
+      </div>
+      <h6>Online</h6>
+
+    </div>
+    <div class="description">
+      <h4>Guaranty Trust Bank plc is a Nigerian multinational financial services company, with its headquarters in Lagos</h4>
+    </div>
+        <div class=" callButton">
+          <button id="engage-digital-click-to-call-btn"></button>
+        </div>
+    </div>
+  <div class="card">
+    <div class="name-status">
+      <div id="image">
+        <img src="dstv.png" height="50rem" width="50rem" style="object-fit: contain;" alt="">
+      </div>
+      <h6>Online</h6>
+
+    </div>
+    <div class="description">
+      <h4>DStv is a direct broadcast satellite service owned by MultiChoice Africa, a subsidiary of Naspers.</h4>
+    </div>
+        <div class=" callButton">
+          <button id="engage-digital-click-to-call-btn"></button>
+        </div>
+      </button>
+    </div>
+  <div class="card">
+    <div class="name-status">
+      <div id="image">
+        <img src="iTCentral.png" height="50rem" width="50rem" style="object-fit: contain;" alt="">
+      </div>
+      <h6>Online</h6>
+
+    </div>
+    <div class="description">
+      <h4>iT Central is a leading provider of IT solutions and services in Nigeria.</h4>
+    </div>
+        <div class=" callButton">
+          <button id="engage-digital-click-to-call-btn"></button>
+        </div>
+
+        <!-- <img src="telephone.png" height="30rem" width="30rem" alt=""> -->
+      </button>
+    </div>
+  </div>
+  <!-- If you want a specific version of engageDigital.js, you can give the url here.
+    If not given the latest sdk will be automatically downloaded from the given engageDomain (attribute in engage-digital-click-to-call-config.js)
+  -->
+  <!-- script src="https://rtc.engagedigital.ai/engageDigital.js"></script -->
+  <script src="engage-digital-click-to-call-config.js"></script>
+  <script src="engage-digital-click-to-call.js"></script>
+
+</body>
+
+</html>

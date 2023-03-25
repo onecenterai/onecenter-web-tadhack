@@ -34,7 +34,7 @@ function initializeEngageDigitalClickToCall(engageDigitalClickToCallConfig) {
 
   engageLog('Starting');
   engageMakeCallBtn = document.getElementById(engageClickToCallConfig.callBtnId)
-  engageMakeCallBtn.innerText = engageClickToCallConfig.makeCallText;
+  engageMakeCallBtn.innerHTML = engageClickToCallConfig.makeCallText;
   engageMakeCallBtn.addEventListener('click', callController);
   engageMakeCallBtn.disabled = true;
   // engagShowimage = document.getElementById("myP").style.visibility ="visible";
@@ -60,7 +60,7 @@ function toResetAudioControls() {
 const callInitialState = {
   execute: () => {
     engageLog('Executing callInitialState');
-    engageMakeCallBtn.textContent = engageClickToCallConfig.makeCallText;
+    engageMakeCallBtn.innerHTML = engageClickToCallConfig.makeCallText;
     engageMakeCallBtn.disabled = false;
   },
   name: 'callInitialState'
@@ -69,7 +69,7 @@ const callInitialState = {
 const callNewState = {
   execute: () => {
     engageLog('Executing callNewState');
-    engageMakeCallBtn.textContent = engageClickToCallConfig.disconnectCallText;
+    engageMakeCallBtn.innerHTML = engageClickToCallConfig.disconnectCallText;
     makeCall();
   },
   name: 'callNewState'
@@ -78,7 +78,7 @@ const callNewState = {
 const callConnectedState = {
   execute: () => {
     engageLog('Executing callConnectedState');
-    engageMakeCallBtn.textContent = engageClickToCallConfig.disconnectCallText;
+    engageMakeCallBtn.innerHTML = engageClickToCallConfig.disconnectCallText;
   },
   name: 'callConnectedState'
 }
@@ -86,7 +86,7 @@ const callConnectedState = {
 const callDisconnectedState = {
   execute: () => {
     engageLog('Executing callDisconnectedState');
-    engageMakeCallBtn.textContent = engageClickToCallConfig.makeCallText;
+    engageMakeCallBtn.innerHTML = engageClickToCallConfig.makeCallText;
     engageLog('Is Client Connected ? ' + engageDigitalClient.isConnected());
     if (!engageDigitalClient.isConnected()) {
       engageMakeCallBtn.disabled = true;
@@ -98,7 +98,7 @@ const callDisconnectedState = {
 const callCanBeEndedState = {
   execute: () => {
     engageLog('Executing callCanBeEndedState');
-    engageMakeCallBtn.textContent = engageClickToCallConfig.makeCallText;
+    engageMakeCallBtn.innerHTML = engageClickToCallConfig.makeCallText;
     disconnectCall();
   },
   name: 'callCanBeEndedState'
