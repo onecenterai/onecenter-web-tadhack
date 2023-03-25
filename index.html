@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+  <header>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Engage Digital Demo App" />
+  <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1, maximum-scale=1" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta id="theme-color" name="theme-color" content="#ffffff" />
+
+  <base target="_blank" />
+
+  <title>One Center</title>
+
+  <link rel="stylesheet" href="app-css.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+  </header>
+<body>
+
+  <div class="container-fluid">
+    <div class="row" style="text-align: center;background-color: rgb(240, 240, 240); display: flex;align-items: center; padding: 1rem 0rem;">
+      <div class="col-4">
+        <h4 class="logo">
+          One<span class="span">Center</span> 
+        
+        </h4>
+      </div>
+      <div class="col-4 nav-lists">
+        <ul>
+          <li><a href="#">About Us </a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <button class="contact-btn">Contact Us</button>
+      </div>
+
+    </div>
+    <div class="heroSection">
+      <div class="row" style="height: 100%; display: flex; align-items: center; justify-content: space-between;">
+        <div class="col-6 heroIntroContainer">
+          <div class="heroIntro">
+            <h1>One<span class="span">Center</span></h1>
+            <h3>
+              Connect with ease, oneCenter does this squeeze
+            </h3>
+            <p>
+              OneCenter is a user-friendly platform that simplifies communication with multiple companies through AI-assisted support and call recording. It streamlines communication for individuals and businesses.</p>            
+              <a href="#getStarted">
+              <button class="contact-btn">Get Started</button>
+  
+            </a>
+
+
+          </div>  
+
+          
+  
+        </div>
+        <div class="col-6" style="display: flex; justify-content: center;">
+          <img src="OneCenter2.png" class="heroSectionImage" style="height: 80vh; border-radius: 3rem;" alt="">
+        </div>
+      </div>
+
+    </div>
+    <div class="row getStarted scroll-link" id="getStarted">
+      <!-- <div class="col-9">
+        <br>
+        <div style="color: blue;font-family:Georgia, 'Times New Roman', Times, serif;;">Guide to plug-in Click-to-Call
+          feature to your website</div>
+        <br>
+        <iframe src="app-guide-content.html" class="guide-content"></iframe>
+      </div> -->
+      <div class="col-6">
+        <div class="row">
+          <div class="inneraudio">
+
+            <div class="remoteAudio">
+              <div class="logoIcon">
+                <img id="initial" class="logo" style="visibility:hidden;display:none; justify-content: center;"
+                  src="mobile-phone.png" alt="Call Logo" width="100" height="100">
+                <img id="Ringing" style="visibility:hidden;display:none;" src="call.png" alt="CalLRinging" width="100"
+                  height="100">
+                <img id="Connected" style="visibility:hidden;display:none;" src="telephone.png" alt="CallConnected"
+                  width="100" height="80">
+              </div>
+              <audio id="engage-digital-remote-audio" autoplay controls></audio>
+            </div>
+
+          </div>
+          <!-- Available Call Centers -->
+        </div>
+      </div>
+      <div class="col-6 cards">
+        <div style="background-color: transparent; height: fit-content; padding: 0; margin: 0;">
+          <div class=" callButton">
+            <button id="engage-digital-click-to-call-btn">
+            </button>
+          </div>
+        </div>
+      <div class="card">
+        <div class="name-status">
+          <div id="image">
+            <img src="mtn.png" height="50rem" width="50rem" alt="">
+          </div>
+          <h6>Online</h6>
+    
+        </div>
+        <div class="description">
+          <h4>MTN Nigeria is a Nigerian telecommunications company, and a subsidiary of South African telecommunications company MTN Group.</h4>
+        </div>
+          </button>
+        </div>
+      <div class="card">
+        <div class="name-status">
+          <div id="image">
+            <img src="gtbank.png" height="50rem" width="50rem" alt="">
+          </div>
+          <h6>Online</h6>
+    
+        </div>
+        <div class="description">
+          <h4>Guaranty Trust Bank plc is a Nigerian multinational financial services company, with its headquarters in Lagos</h4>
+        </div>
+        </div>
+      <div class="card">
+        <div class="name-status">
+          <div id="image">
+            <img src="dstv.png" height="50rem" width="50rem" style="object-fit: contain;" alt="">
+          </div>
+          <h6>Online</h6>
+    
+        </div>
+        <div class="description">
+          <h4>DStv is a direct broadcast satellite service owned by MultiChoice Africa, a subsidiary of Naspers.</h4>
+        </div>
+        </div>
+      <div class="card">
+        <div class="name-status">
+          <div id="image">
+            <img src="iTCentral.png" height="50rem" width="50rem" style="object-fit: contain;" alt="">
+          </div>
+          <h6>Online</h6>
+    
+        </div>
+        <div class="description">
+          <h4>iT Central is a leading provider of IT solutions and services in Nigeria.</h4>
+        </div>
+    
+            <!-- <img src="telephone.png" height="30rem" width="30rem" alt=""> -->
+        </div>
+     </div>
+    </div>
+
+  </div>
+
+  
+  
+  
+  
+  
+  
+  <!-- If you want a specific version of engageDigital.js, you can give the url here.
+    If not given the latest sdk will be automatically downloaded from the given engageDomain (attribute in engage-digital-click-to-call-config.js)
+  -->
+  <!-- script src="https://rtc.engagedigital.ai/engageDigital.js"></script -->
+  <script src="engage-digital-click-to-call-config.js"></script>
+  <script src="engage-digital-click-to-call.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $('.scroll-link').click(function(e) {
+        e.preventDefault(); // prevent the default behavior of the anchor tag
+        var target = $(this).attr('href'); // get the target element
+        $('html, body').animate({
+          scrollTop: $(target).offset().top // scroll to the target element
+        }, 1000); // set the animation duration to 1000ms (1 second)
+      });
+    });
+  </script>
+
+</body>
+
+</html>
