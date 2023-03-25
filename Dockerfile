@@ -5,7 +5,7 @@ FROM node:14-alpine
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY app-css.css app-guide-content.html app-index.html call.png engage-digital-click-to-call-config.js engage-digital-click-to-call.js mobile-phone.png phone-call.png /app/
+COPY . /app/
 
 # Install any necessary dependencies
 RUN npm install express
@@ -14,4 +14,4 @@ RUN npm install express
 EXPOSE 3000
 
 # Start the app from app-index.html not app-guide-content.html
-CMD ["node", "-e", "const express = require('express'); const app = express(); app.get('/', (req, res) => res.sendFile('/app-index.html', { root: __dirname })); app.listen(3000, () => console.log('App listening on port 3000!'));"]
+CMD ["node", "-e", "const express = require('express'); const app = express(); app.use(express.static('.')); app.get('/', (req, res) => res.sendFile('/app-index.html', { root: __dirname })); app.listen(3000, () => console.log('App listening on port 3000!'));"]
