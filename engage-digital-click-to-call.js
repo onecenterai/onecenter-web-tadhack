@@ -117,7 +117,11 @@ function connectToEngageDigital() {
   const engageDomain = engageClickToCallConfig.engageDomain;
 
   if (isEngageDigitalSdkLoaded) {
-    const userIdentity = Math.random().toString(36).substr(2, 7);
+    // This is where we set user identity and partner identity, we need to
+    // change the this to real user identity and partner identity
+    // whenever a user selects a partner to call, we change the partnerId
+    // the userId can be obtained when the user logins in
+    const userIdentity = '6_5' //first digit is userId second digit is partnerId
 
     const config = {
       log: {
