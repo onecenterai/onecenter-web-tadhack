@@ -121,7 +121,7 @@ function connectToEngageDigital() {
     // change the this to real user identity and partner identity
     // whenever a user selects a partner to call, we change the partnerId
     // the userId can be obtained when the user logins in
-    const userIdentity = '6_5' //first digit is userId second digit is partnerId
+    const userIdentity = '18_13' //first digit is userId second digit is partnerId
 
     const config = {
       log: {
